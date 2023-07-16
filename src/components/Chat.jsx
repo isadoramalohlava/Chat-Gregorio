@@ -38,8 +38,8 @@ export function Chat() {
                         As partes acordam com os termos e condições a seguir:</p>
                     </div>
                     <time className={styles.timeConversation}>15:00</time>
-
-                                       
+                
+                   
 
                     </div>
 
