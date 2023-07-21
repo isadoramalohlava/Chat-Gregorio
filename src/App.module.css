@@ -1,4 +1,4 @@
 .application {
-    display: grid;
+    display: flex;
     grid-template-columns: 372px 829px;
 }
