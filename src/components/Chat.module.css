@@ -1,6 +1,8 @@
 .Chat {
-    max-height: 500px;
-    overflow: scroll;
+    display: block;
+    overflow-y: auto;
+    height: 620px;
+
 }
 
 .avatar {
@@ -110,7 +112,7 @@ header span {
 }
 
 #inputText input {
-    width: 800px;
+    width: 750px;
     padding-left: 20px;
 }
 
@@ -126,6 +128,6 @@ header span {
 
 #inputType {
     position: absolute;
-    left: 800px;
+    left: 750px;
     bottom: 25px;
 }

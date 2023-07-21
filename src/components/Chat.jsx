@@ -19,7 +19,7 @@ export function Chat() {
                 </div>
             </header>
 
-            <div id={styles.Chat}>
+            <div className={styles.Chat}>
                 <div id={styles.conversation1}>
                     <p>Como especialista em direito tributário no Brasil, estou aqui para ajudar a esclarecer suas dúvidas e fornecer informações relevantes sobre esse campo do direito.</p> 
                     </div>
