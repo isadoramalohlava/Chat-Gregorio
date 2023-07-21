@@ -92,12 +92,12 @@ export function Chat({ conversationId }) {
             <div className={styles.Chat}>
                 {conversation.map((message, index) => (
                     message.is_from_user ? (
-                        <div key={index} id={styles.conversation1}>
+                        <div key={index} id={styles.conversation2}>
                             <p>{message.content}</p>
                             <time className={styles.timeConversation}>{message.created_at}</time>
                         </div>
                     ) : (
-                        <div key={index} id={styles.conversation2}>
+                        <div key={index} id={styles.conversation1}>
                             <p>{message.content}</p>
                             <time className={styles.timeConversation}>{message.created_at}</time>
                         </div>
