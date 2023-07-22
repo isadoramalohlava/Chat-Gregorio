@@ -31,7 +31,7 @@ export function Chat() {
                     <time className={styles.timeConversation} id={styles.timeUser}>15:00</time>
 
                 <div id={styles.conversation1}>
-                        <p>CONTRATO DE AUTORIZAÇÃO PARA CUIDADO DE CONTAS BANCÁRIAS
+                        <p>CONTRATO DE AUTORIZAÇÃO PARA CUIDADO DE CONTAS BANCÁRIASS
                         Este Contrato de Autorização para Cuidado de Contas Bancárias (doravante referido como "Contrato") é celebrado entre [Seu Nome Completo] (doravante referido como "Outorgante") e Joaquim Barbosa da Silva (doravante referido como "Outorgado"), em [Data de Celebração do Contrato].
                         CONSIDERANDO que o Outorgante deseja designar o Outorgado como responsável pelo cuidado de suas contas bancárias durante um período específico;
                         CONSIDERANDO que o Outorgante confia no Outorgado para exercer essas responsabilidades de forma diligente e de acordo com as instruções fornecidas;
