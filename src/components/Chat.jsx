@@ -10,9 +10,9 @@ export function Chat({ conversationId }) {
     useEffect(() => {
       const fetchConversation = async () => {
         try {
-          const response = await fetch(`http://127.0.0.1:8000/api/v1/chatbot/conversations/${conversationId.id}/messages/`, {
+          const response = await fetch(`http://ec2-3-88-199-233.compute-1.amazonaws.com:8000/api/v1/chatbot/conversations/${conversationId.id}/messages/`, {
             headers: {
-                Authorization:'Basic YWRtaW46YWRtaW4=',
+                Authorization:'Basic cHJlZGRpdGFhZG1pbjpmdHZydE1uN1U3UmVUZGVr',
             },
           });
           const data = await response.json();
@@ -44,11 +44,11 @@ export function Chat({ conversationId }) {
         setConversation([...conversation, message]);
         setNewMessage('');
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/v1/chatbot/conversations/${conversationId.id}/messages/create/`, {
+            const response = await fetch(`http://ec2-3-88-199-233.compute-1.amazonaws.com:8000/api/v1/chatbot/conversations/${conversationId.id}/messages/create/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: 'Basic YWRtaW46YWRtaW4=',
+                    Authorization: 'Basic cHJlZGRpdGFhZG1pbjpmdHZydE1uN1U3UmVUZGVr',
                 },
                 body: JSON.stringify({
                     conversation: conversationId.id,
