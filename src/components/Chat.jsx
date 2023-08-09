@@ -1,64 +1,173 @@
 import styles from './Chat.module.css';
-import { DotsThreeVertical, PlusCircle, PaperPlaneTilt } from "@phosphor-icons/react";
+import { PaperPlaneTilt, ArrowCounterClockwise } from "@phosphor-icons/react";
+import { useState, useEffect } from 'react';
+import API_BASE_URL from '../../apiConfig'; // Importe o URL da API
 
-export function Chat() {
+
+export function Chat({ characterId }) {
+    const [conversation, setConversation] = useState([]);
+    const [newMessage, setNewMessage] = useState('');
+    const [conversationId, setConversationId] = useState('');
+
+    useEffect(() => {
+        const fetchConversation = async () => {
+            try {
+                const id = localStorage.getItem('conversationId');
+                if (id) {
+                    setConversationId(id);
+                } else {
+                    createConversation();
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+
+        fetchConversation();
+    }, [characterId]);
+
+    const createConversation = async () => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/v1/chatbot/conversations/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    character: characterId,
+                }),
+            });
+            const data = await response.json();
+            if (response.ok) {
+                setConversationId(data.id);
+                localStorage.setItem('conversationId', data.id);
+                // Clear existing conversation messages when recreating
+                setConversation([]);
+            } else {
+                console.error('Error:', response.status);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+    useEffect(() => {
+        if (conversationId) {
+            const fetchConversationMessages = async () => {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/v1/chatbot/conversations/${conversationId}/messages/`);
+                    const data = await response.json();
+                    setConversation(data.results.reverse());
+
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            };
+
+            fetchConversationMessages();
+        }
+    }, [conversationId]);
+
+    const sendMessage = async () => {
+        event.preventDefault();
+        if (newMessage.trim() === '') {
+            setNewMessage('');
+            return;
+        }
+
+        const message = {
+            id: getLastMessageId() + 1,
+            content: newMessage,
+            is_from_user: true,
+            created_at: new Date().toISOString(),
+            only_front: true,
+        };
+
+        setConversation([...conversation, message]);
+        setNewMessage('');
+
+        if (conversationId) {
+            console.log(getLastMessageId().count);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/v1/chatbot/conversations/${conversationId}/messages/create/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        conversation: conversationId,
+                        content: newMessage,
+                        is_from_user: true,
+                        in_reply_to: getLastMessageId() > 0 ? getLastMessageId() : null,
+                    }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const resp = {
+                        id: getLastMessageId() + 2,
+                        content: data.response,
+                        is_from_user: false,
+                        created_at: 'agora',
+                    };
+                    console.log(data);
+                    setConversation([...conversation, message, resp]);
+                } else {
+                    console.error('Error:', response.status);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    };
+
+    const getLastMessageId = () => {
+        if (conversation.length > 0) {
+            const lastMessage = conversation[conversation.length - 1];
+            return lastMessage.id;
+        }
+        return 0;
+    };
+
+
     return (
         <div>
             <header>
                 <div>
-                <img className={styles.avatar} src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=50" alt="" />
                 </div>
-
                 <div id={styles.userConversation}>
-                <h1>Rafael Pereira</h1>
-                <span>Digitando...</span>
                 </div>
-
                 <div id={styles.icon}>
-                    <a href=""><DotsThreeVertical size={32} /></a>
+                    <a onClick={createConversation} ><ArrowCounterClockwise size={32} /></a>
                 </div>
             </header>
-
             <div className={styles.Chat}>
-                <div id={styles.conversation1}>
-                    <p>Como especialista em direito tributário no Brasil, estou aqui para ajudar a esclarecer suas dúvidas e fornecer informações relevantes sobre esse campo do direito.</p> 
-                    </div>
-                    <time className={styles.timeConversation}>15:00</time>
+                {conversation.map((message, index) => (
+                    message.is_from_user ? (
+                        <div key={index} id={styles.conversation2}>
+                            <p>{message.content}</p>
+                            <time className={styles.timeConversation}>{message.created_at}</time>
+                        </div>
+                    ) : (
+                        <div key={index} id={styles.conversation1}>
+                            <p>{message.content}</p>
+                            <time className={styles.timeConversation}>{message.created_at}</time>
+                        </div>
+                    )
+                ))}
 
-                <div id={styles.conversation2}>
-                        <p>Redija um contrato que dê plenos poderes para meu irmão "Joaquim Barbosa da Silva" cuidar das minhas contas bancárias durante o período de 3 meses a partir de agosto de 2023.</p>
-                    </div>
-                    <time className={styles.timeConversation} id={styles.timeUser}>15:00</time>
-
-                <div id={styles.conversation1}>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci dicta possimus incidunt ipsum corporis ut consequatur quisquam enim eos? Quis nisi numquam sequi! Quas explicabo vitae ea omnis excepturi exercitationem saepe voluptatum, soluta velit temporibus consequuntur. Tempore quidem minus porro repudiandae iste earum quod quia possimus. Totam, consequuntur odio.</p>
-                    </div>
-                    <time className={styles.timeConversation}>15:00</time>
-                
-                   
-
-                    </div>
-
-         
-            <div id={styles.divClientOptions}>
-                <div className={styles.clientOptions}>Contrato de compra e venda</div>
-                <div className={styles.clientOptions}>Auxílio trabalhista</div>
-                <div className={styles.clientOptions}>Proteção ao consumidor</div>
-                <div className={styles.clientOptions}>Proteção ao consumidor</div>
-                
             </div>
-
             <div id={styles.inputText}>
-                <div id={styles.plusIcon}>
-                    <a href="" ><PlusCircle size={45} color='#000000'/></a>
-                </div>
                 <div id={styles.wrapperInputSend}>
                     <div id={styles.inputType}>
-                            <a href=""><PaperPlaneTilt size={32} color='#BBBBBB'/></a>
+                        <a type="button" href=""><PaperPlaneTilt size={32} color='#BBBBBB' onClick={sendMessage}/></a>
                     </div>
-                        <input type="text" placeholder='Enviar mensagem...' id={styles.inputConversation}/>
+                    <input type="text" placeholder='Enviar mensagem...' id={styles.inputConversation} value={newMessage} onChange={(e) => setNewMessage(e.target.value)}/>
                 </div>
             </div>
+            <div className={styles.centeredContainer}>
+            <div id={styles.micIcon}>Powered By <b>DubleDigital</b></div>
         </div>
-        );
-    }
+        </div>
+    );
+};

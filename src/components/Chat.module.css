@@ -1,8 +1,6 @@
 .Chat {
-    display: block;
-    overflow-y: auto;
-    height: 620px;
-
+    height: 650px;
+    overflow: scroll;
 }
 
 .avatar {
@@ -130,4 +128,21 @@ header span {
     position: absolute;
     left: 750px;
     bottom: 25px;
+}
+
+input {
+    width: 290px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #F5F7F9;
+    padding-left: 45px;
+    margin: 20px;
+    border: none;
+
+}
+.centeredContainer {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    margin-top: 20px; /* Add margin as needed */
 }
