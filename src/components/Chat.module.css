@@ -1,6 +1,10 @@
 .Chat {
+    /* width: 100%; Set the same width as the input field */
     height: 650px;
     overflow: scroll;
+    padding-right: 15px; /* Adjust as needed */
+    
+    
 }
 
 .avatar {
@@ -103,15 +107,13 @@ header span {
     background-color: rgba(0, 0, 0, 0.774);
 }
 
-#inputText {
-    border-top: 1px solid rgb(221, 218, 218);
-    margin-top: 10px;
-    display: flex;
+#inputText  {
+   padding: 10px; /* Reduce padding for better use of space */
 }
 
 #inputText input {
-    width: 750px;
-    padding-left: 20px;
+    padding: 10px;
+
 }
 
 #plusIcon {
@@ -135,9 +137,11 @@ input {
     height: 50px;
     border-radius: 12px;
     background-color: #F5F7F9;
-    padding-left: 45px;
+    padding-left: 0px;
     margin: 20px;
     border: none;
+    /* max-width: 100%; Set maximum width to prevent overflow */
+    width: calc(100% - 40px); 
 
 }
 .centeredContainer {
