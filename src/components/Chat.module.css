@@ -128,8 +128,8 @@ header span {
 
 #inputType {
     position: absolute;
-    left: 750px;
-    bottom: 25px;
+    left: calc(100% - 50px);
+    bottom: 30px;
 }
 
 input {
