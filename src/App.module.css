@@ -1,4 +1,11 @@
 .application {
     display: flex;
-    grid-template-columns: 372px 829px;
+    flex-direction: column; /* Stack items vertically on small screens */
+}
+
+/* Apply styles for screens with a maximum width of 768px (typical tablet and mobile screens) */
+@media (max-width: 768px) {
+    .application {
+        flex-direction: column; /* Keep stacking items vertically on small screens */
+    }
 }
