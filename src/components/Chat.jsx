@@ -134,11 +134,8 @@ export function Chat({ characterId }) {
         <div>
             <header>
                 <div>
-                    {/* <img className={styles.avatar} src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=50" alt="" /> */}
                 </div>
                 <div id={styles.userConversation}>
-                    {/* <h1>Rafael Pereira</h1>
-                    <span>Disponível</span> */}
                 </div>
                 <div id={styles.icon}>
                     <a onClick={createConversation} ><ArrowCounterClockwise size={32} /></a>
@@ -159,15 +156,7 @@ export function Chat({ characterId }) {
                     )
                 ))}
             </div>
-            {/* <div id={styles.divClientOptions}>
-                  {conversationId.prebuildMEssages.map((message, index) => (
-                      <div key={index} className={styles.clientOptions}>{message}</div>     
-                      ))}
-            </div> */}
             <div id={styles.inputText}>
-                {/* <div id={styles.plusIcon}>
-                    <a href="" ><PlusCircle size={45} color='#000000'/></a>
-                </div> */}
                 <div id={styles.wrapperInputSend}>
                     <div id={styles.inputType}>
                         <a type="button" href=""><PaperPlaneTilt size={32} color='#BBBBBB' onClick={sendMessage}/></a>
