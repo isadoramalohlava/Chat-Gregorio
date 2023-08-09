@@ -110,7 +110,7 @@ header span {
 }
 
 #inputText input {
-    width: 800px;
+    width: 750px;
     padding-left: 20px;
 }
 
@@ -126,7 +126,7 @@ header span {
 
 #inputType {
     position: absolute;
-    left: 800px;
+    left: 750px;
     bottom: 25px;
 }
 

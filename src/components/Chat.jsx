@@ -155,6 +155,7 @@ export function Chat({ characterId }) {
                         </div>
                     )
                 ))}
+
             </div>
             <div id={styles.inputText}>
                 <div id={styles.wrapperInputSend}>
