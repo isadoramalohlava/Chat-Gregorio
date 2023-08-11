@@ -52,12 +52,12 @@ header span {
 }
 
 #conversation1 {
-    width: 512px;
+    max-width: 75%;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
     margin-left: 40px;
     border-radius: 10px 10px 10px 0px;
-    padding: 20px;
+    padding: 5px 5px 5px 10px;
     margin-top: 20px;
     margin-bottom: 5px;
 }
@@ -71,15 +71,15 @@ header span {
 }
 
 #conversation2 {
-    width: 512px;
+    max-width: 75%;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
-    margin-left: 40px;
+    margin-right: 40px;
     border-radius: 10px 10px 0px 10px;
-    padding: 20px;
+    padding: 5px 5px 5px 10px;
     margin-top: 20px;
     margin-bottom: 5px;
-    margin-left: 250px;
+    margin-left: 25%;
     background-color: #538AF7;
     color: white;
 }
@@ -107,15 +107,15 @@ header span {
     background-color: rgba(0, 0, 0, 0.774);
 }
 
-#inputText  {
-   padding: 10px; /* Reduce padding for better use of space */
+#inputText input {
+    padding: 10px;
+
 }
 
 #inputText input {
     padding: 10px;
 
 }
-
 #plusIcon {
     margin-left: 15px;
     margin-top: 20px;
