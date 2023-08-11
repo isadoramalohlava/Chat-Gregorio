@@ -8,6 +8,21 @@ export function Chat({ characterId }) {
     const [conversation, setConversation] = useState([]);
     const [newMessage, setNewMessage] = useState('');
     const [conversationId, setConversationId] = useState('');
+    const [isTyping, setIsTyping] = useState(false);
+    const [character, setCharacter] = useState([]);
+
+    useEffect(() => { 
+        const fetchCharacter = async () => {
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/v1/chatbot/character/${characterId}/`);
+                const data = await response.json();
+                setCharacter(data);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+        fetchCharacter();
+    }, [characterId]);
 
     useEffect(() => {
         const fetchConversation = async () => {
@@ -132,17 +147,21 @@ export function Chat({ characterId }) {
 
     return (
         <div>
+            <meta property="og:title" content={character.name}></meta>
             <header>
                 <div>
+                     <img className={styles.avatar} src={character.url_image} alt="" />
                 </div>
                 <div id={styles.userConversation}>
+                    <h1>{character.name}</h1>
+                    <span>Disponível</span>
                 </div>
                 <div id={styles.icon}>
                     <a onClick={createConversation} ><ArrowCounterClockwise size={32} /></a>
                 </div>
             </header>
             <div className={styles.Chat}>
-                {conversation.map((message, index) => (
+                 {conversation.map((message, index) => (
                     message.is_from_user ? (
                         <div key={index} id={styles.conversation2}>
                             <p>{message.content}</p>
