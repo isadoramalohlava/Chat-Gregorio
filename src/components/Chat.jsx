@@ -149,6 +149,7 @@ export function Chat({ characterId }) {
         <div>
             <meta property="og:title" content={character.name}></meta>
             <header>
+                <title>{character.name}</title>
                 <div>
                      <img className={styles.avatar} src={character.url_image} alt="" />
                 </div>
