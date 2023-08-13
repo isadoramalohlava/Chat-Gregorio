@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-
 import { Chat } from './components/Chat';
 import './global.css';
 import styles from './App.module.css';
+import { Sidebar } from './components/Sidebar';
 
 function App() {
   return (

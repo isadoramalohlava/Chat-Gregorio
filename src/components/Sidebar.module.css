@@ -148,3 +148,527 @@ input {
     cursor: pointer;
     background-color: rgb(177, 53, 47);
 }
+
+
+@media (min-width: 768px){
+    aside {
+        
+        width: 300px;
+        height: 680px;
+      
+    
+    }
+    
+    .avatar {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+    }
+    
+    .user {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+       
+    }
+    
+    #userImg {
+        padding: 10px;
+    }
+    
+    #userName h1 {
+        line-height: 28.64px;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 15px;
+    }
+    
+    #userName h3{
+        color: rgba(187, 187, 187, 1);
+        font-size: 16px;
+        font-weight: 500;
+        
+    }
+    
+    .user span {
+        background-color: #5FB8A4;
+        width: 50px;
+        height: 13px;
+        border-radius: 10px;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        margin-top: 30px;
+        font-family: 'Work Sans', serif;
+        padding: 4px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+    
+    input {
+        width: 230px;
+        height: 40px;
+        border-radius: 12px;
+        padding-left: 40px;
+        margin: 10px;
+           
+    }
+    
+    
+    .wrapper {
+        position:relative;
+    }
+    
+    .icon {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        
+    }
+
+       
+    .myConversation {
+        margin-top: 15px;
+        margin-left: 13px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    .chats {
+        display: grid;
+        grid-template-columns: 0.8fr 2fr 1fr;
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+    
+    .chats h1 {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px
+    }
+    
+    .chats h3{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 5px;
+        margin-top: 4px;
+            
+    }
+    
+    .chats img {
+        margin-bottom: 10px;
+    }
+    .chats time{
+        padding-left: 35px;
+        padding-top: 8px;
+        font-size: 12px;
+        line-height: 16.71px;
+        font-weight: 400;
+    }
+    
+    .button{
+        width: 275px;
+        height: 45px;
+        left: 100px;
+        font-size: 14px;
+        font-weight: 800;
+        border: none;
+        margin-top: 600px;
+        margin-left: 10px;
+               
+    }
+
+}
+
+@media (min-width: 1024px) {
+    aside {
+        
+        width: 300px;
+        height: 680px;
+      
+    
+    }
+    
+    .avatar {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+    }
+    
+    .user {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+       
+    }
+    
+    #userImg {
+        padding: 10px;
+    }
+    
+    #userName h1 {
+        line-height: 28.64px;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 15px;
+    }
+    
+    #userName h3{
+        color: rgba(187, 187, 187, 1);
+        font-size: 16px;
+        font-weight: 500;
+        
+    }
+    
+    .user span {
+        background-color: #5FB8A4;
+        width: 50px;
+        height: 13px;
+        border-radius: 10px;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        margin-top: 30px;
+        font-family: 'Work Sans', serif;
+        padding: 4px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+    
+    input {
+        width: 230px;
+        height: 40px;
+        border-radius: 12px;
+        padding-left: 40px;
+        margin: 10px;
+           
+    }
+    
+    
+    .wrapper {
+        position:relative;
+    }
+    
+    .icon {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        
+    }
+
+       
+    .myConversation {
+        margin-top: 15px;
+        margin-left: 13px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    .chats {
+        display: grid;
+        grid-template-columns: 0.8fr 2fr 1fr;
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+    
+    .chats h1 {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px
+    }
+    
+    .chats h3{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 5px;
+        margin-top: 4px;
+            
+    }
+    
+    .chats img {
+        margin-bottom: 10px;
+    }
+    .chats time{
+        padding-left: 35px;
+        padding-top: 8px;
+        font-size: 12px;
+        line-height: 16.71px;
+        font-weight: 400;
+    }
+    
+    .button{
+        width: 275px;
+        height: 45px;
+        left: 100px;
+        font-size: 14px;
+        font-weight: 800;
+        border: none;
+        margin-top: 100px;
+        margin-left: 10px;
+               
+    }
+
+    
+}
+
+
+    @media (min-width: 1440px) {
+        aside {
+            
+            width: 400px;
+            height: 680px;
+          
+        
+        }
+        
+        .avatar {
+            height: 58px;
+            width: 58px;
+            border-radius: 50px;
+        }
+        
+        .user {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+           
+        }
+        
+        #userImg {
+            padding: 10px;
+        }
+        
+        #userName h1 {
+            line-height: 28.64px;
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+        
+        #userName h3{
+            color: rgba(187, 187, 187, 1);
+            font-size: 16px;
+            font-weight: 500;
+            
+        }
+        
+        .user span {
+            background-color: #5FB8A4;
+            width: 50px;
+            height: 13px;
+            border-radius: 10px;
+            text-align: center;
+            justify-content: center;
+            color: white;
+            margin-top: 30px;
+            font-family: 'Work Sans', serif;
+            padding: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        input {
+            width: 330px;
+            height: 40px;
+            border-radius: 12px;
+            padding-left: 40px;
+            margin: 10px;
+               
+        }
+        
+        
+        .wrapper {
+            position:relative;
+        }
+        
+        .icon {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            
+        }
+    
+           
+        .myConversation {
+            margin-top: 15px;
+            margin-left: 13px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .chats {
+            display: grid;
+            grid-template-columns: 0.8fr 2fr 1fr;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+        
+        .chats h1 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            margin-left: 0px;
+            margin-top: 8px;
+        }
+        
+        .chats h3{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 5px;
+            margin-top: 4px;
+                
+        }
+        
+        .chats img {
+            margin-bottom: 10px;
+        }
+        .chats time{
+            padding-left: 35px;
+            padding-top: 8px;
+            font-size: 12px;
+            line-height: 16.71px;
+            font-weight: 400;
+        }
+        
+        .button{
+            width: 275px;
+            height: 45px;
+            left: 100px;
+            font-size: 14px;
+            font-weight: 800;
+            border: none;
+            margin-top: 270px;
+            margin-left: 10px;
+                   
+        }
+        
+        }
+
+
+        @media (min-width: 1440px) {
+            aside {
+                
+                width: 400px;
+                height: 680px;
+              
+            
+            }
+            
+            .avatar {
+                height: 58px;
+                width: 58px;
+                border-radius: 50px;
+            }
+            
+            .user {
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+               
+            }
+            
+            #userImg {
+                padding: 10px;
+            }
+            
+            #userName h1 {
+                line-height: 28.64px;
+                font-size: 24px;
+                font-weight: 700;
+                margin-top: 15px;
+            }
+            
+            #userName h3{
+                color: rgba(187, 187, 187, 1);
+                font-size: 16px;
+                font-weight: 500;
+                
+            }
+            
+            .user span {
+                background-color: #5FB8A4;
+                width: 50px;
+                height: 13px;
+                border-radius: 10px;
+                text-align: center;
+                justify-content: center;
+                color: white;
+                margin-top: 30px;
+                font-family: 'Work Sans', serif;
+                padding: 4px;
+                font-size: 11px;
+                font-weight: 600;
+            }
+            
+            input {
+                width: 330px;
+                height: 40px;
+                border-radius: 12px;
+                padding-left: 40px;
+                margin: 10px;
+                   
+            }
+            
+            
+            .wrapper {
+                position:relative;
+            }
+            
+            .icon {
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+                
+            }
+        
+               
+            .myConversation {
+                margin-top: 15px;
+                margin-left: 13px;
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+            
+            .chats {
+                display: grid;
+                grid-template-columns: 0.8fr 2fr 1fr;
+                padding-left: 10px;
+                padding-top: 15px;
+            }
+            
+            .chats h1 {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 25px;
+                margin-left: 0px;
+                margin-top: 8px;
+            }
+            
+            .chats h3{
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 5px;
+                margin-top: 4px;
+                    
+            }
+            
+            .chats img {
+                margin-bottom: 10px;
+            }
+            .chats time{
+                padding-left: 35px;
+                padding-top: 8px;
+                font-size: 12px;
+                line-height: 16.71px;
+                font-weight: 400;
+            }
+            
+            .button{
+                width: 275px;
+                height: 45px;
+                left: 100px;
+                font-size: 14px;
+                font-weight: 800;
+                border: none;
+                margin-top: 270px;
+                margin-left: 10px;
+                       
+            }
+            
+            }

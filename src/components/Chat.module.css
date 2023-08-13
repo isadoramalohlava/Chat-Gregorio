@@ -150,3 +150,562 @@ input {
     align-items: center; /* Vertically center the content */
     margin-top: 20px; /* Add margin as needed */
 }
+
+@media (min-width: 768px){
+    .Chat {
+        /* width: 100%; Set the same width as the input field */
+        width: 700px;
+        padding-right: 15px; /* Adjust as needed */
+        
+        
+    }
+    
+    .avatar {
+        height: 58px;
+        width: 58px;
+        border-radius: 50px;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 0.3fr 2fr 1fr;
+        border-bottom: 1px solid rgb(209, 209, 209);
+        width: 700px;
+    }
+    
+    header h1 {
+        line-height: 28.64px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+    #userConversation {
+        margin-right: 180px;
+        margin-top: 20px;
+    }
+    
+    header img {
+        margin-left: 33px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    
+    header span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.09px;
+        color: #BBBBBB;
+    }
+    
+    #icon {
+        margin-top: 29px;
+    }
+    
+    #icon a{
+        margin-left: 250px;
+    }
+    
+    #conversation1 {
+        width: 512px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+        margin-left: 40px;
+        border-radius: 10px 10px 10px 0px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .timeConversation {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.71px;
+        color:rgba(187, 187, 187, 1);
+        margin-left: 39px;
+    }
+    
+    #conversation2 {
+        width: 512px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+        margin-left: 40px;
+        border-radius: 10px 10px 0px 10px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-left: 250px;
+        background-color: #538AF7;
+        color: white;
+    }
+    
+    #timeUser {
+        margin-left: 760px;
+    }
+    
+    #divClientOptions {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    
+    .clientOptions {
+        background-color: black;
+        color: white;
+        max-width: fit-content;
+        padding: 8px;
+        border-radius: 12px;
+    }
+    
+    .clientOptions:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.774);
+    }
+    
+    #inputText  {
+       padding: 10px; /* Reduce padding for better use of space */
+    }
+    
+    #inputText input {
+        padding: 10px;
+    
+    }
+    
+    #plusIcon {
+        margin-left: 15px;
+        margin-top: 20px;
+        
+    }
+    
+    #wrapperInputSend {
+        position: relative;
+    }
+    
+    #inputType {
+        position: absolute;
+        left: calc(100% - 50px);
+        bottom: 30px;
+    }
+    
+    input {
+        width: 290px;
+        height: 50px;
+        border-radius: 12px;
+        background-color: #F5F7F9;
+        padding-left: 0px;
+        margin: 20px;
+        border: none;
+        /* max-width: 100%; Set maximum width to prevent overflow */
+        width: calc(100% - 40px); 
+    
+    }
+    .centeredContainer {
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        margin-top: 20px; /* Add margin as needed */
+    }
+      
+}
+    
+
+
+@media (min-width: 1024px) {
+    
+    .Chat {
+        width: 1000px;/* width: 100%; Set the same width as the input field */
+        height: 350px;
+        overflow: scroll;
+        padding-right: 15px; /* Adjust as needed */
+        
+        
+    }
+    
+     
+    header {
+        width: 1000px;
+        display: grid;
+        grid-template-columns: 0.3fr 2fr 1fr;
+        border-bottom: 1px solid rgb(209, 209, 209);
+    }
+    
+    header h1 {
+        margin-left: 15px;
+    }
+    
+  
+    header img {
+        margin-left: 33px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    
+    header span {
+       
+        margin-left: 15px;
+    }
+    
+     
+    #conversation1 {
+        width: 600px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+        margin-left: 40px;
+        border-radius: 10px 10px 10px 0px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .timeConversation {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.71px;
+        color:rgba(187, 187, 187, 1);
+        margin-left: 0px;
+    }
+    
+    #conversation2 {
+        width: 600px;
+        margin-left: 350px;
+        background-color: #538AF7;
+        color: white;
+    }
+    
+    #timeUser {
+        margin-left: 860px;
+    }
+    
+    #divClientOptions {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    
+    .clientOptions {
+        background-color: black;
+        color: white;
+        max-width: fit-content;
+        padding: 8px;
+        border-radius: 12px;
+    }
+    
+     
+    #inputText  {
+       padding: 10px; /* Reduce padding for better use of space */
+    }
+    
+    #inputText input {
+        padding: 10px;
+        width: 960px;
+    
+    }
+    
+    
+    #wrapperInputSend {
+        position: relative;
+    }
+    
+    #inputType {
+        position: absolute;
+        left: calc(100% - 50px);
+        bottom: 30px;
+    }
+    
+    input {
+        width: 290px;
+        height: 50px;
+        border-radius: 12px;
+        background-color: #F5F7F9;
+        padding-left: 0px;
+        margin: 20px;
+        border: none;
+        /* max-width: 100%; Set maximum width to prevent overflow */
+        width: calc(100% - 40px); 
+    
+    }
+    .centeredContainer {
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        margin-top: 20px; /* Add margin as needed */
+    }
+}
+
+@media (min-width: 1440px) {
+    
+    .Chat {
+        width: 1410px;/* width: 100%; Set the same width as the input field */
+        height: 370px;
+        overflow: scroll;
+        padding-right: 15px; /* Adjust as needed */
+        
+        
+    }
+    
+     
+    header {
+        width: 1430px;
+        display: grid;
+        grid-template-columns: 0.3fr 2fr 1fr;
+        border-bottom: 1px solid rgb(209, 209, 209);
+    }
+    
+    header h1 {
+        margin-left: 15px;
+    }
+    
+  
+    header img {
+        margin-left: 33px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    
+    header span {
+       
+        margin-left: 15px;
+    }
+
+    header icon {
+        margin-left: 650px;
+    }
+    
+     
+    #conversation1 {
+        width: 700px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+        margin-left: 40px;
+        border-radius: 10px 10px 10px 0px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .timeConversation {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.71px;
+        color:rgba(187, 187, 187, 1);
+        margin-left: 0px;
+    }
+    
+    #conversation2 {
+        width: 700px;
+        margin-left: 650px;
+        background-color: #538AF7;
+        color: white;
+    }
+    
+     
+    #divClientOptions {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    
+    .clientOptions {
+        background-color: black;
+        color: white;
+        max-width: fit-content;
+        padding: 8px;
+        border-radius: 12px;
+    }
+    
+     
+    #inputText  {
+       padding: 10px; /* Reduce padding for better use of space */
+    }
+    
+    #inputText input {
+        padding: 10px;
+        width: 960px;
+    
+    }
+    
+    
+    #wrapperInputSend {
+        position: relative;
+    }
+    
+    #inputType {
+        position: absolute;
+        left: calc(100% - 50px);
+        bottom: 30px;
+    }
+    
+    input {
+       
+        height: 50px;
+        border-radius: 12px;
+        background-color: #F5F7F9;
+        padding-left: 0px;
+        margin: 20px;
+        border: none;
+        /* max-width: 100%; Set maximum width to prevent overflow */
+        width: calc(100% - 40px); 
+    
+    }
+    .centeredContainer {
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        margin-top: 20px; /* Add margin as needed */
+    }
+}
+
+@media (min-width: 2560px) {
+    
+    .Chat {
+        /* width: 100%; Set the same width as the input field */
+        height: 650px;
+        overflow: scroll;
+        padding-right: 15px; /* Adjust as needed */
+        
+        
+    }
+    
+    .avatar {
+        height: 58px;
+        width: 58px;
+        border-radius: 50px;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 0.3fr 2fr 1fr;
+        border-bottom: 1px solid rgb(209, 209, 209);
+    }
+    
+    header h1 {
+        line-height: 28.64px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+    #userConversation {
+        margin-right: 180px;
+        margin-top: 20px;
+    }
+    
+    header img {
+        margin-left: 33px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    
+    header span {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.09px;
+        color: #BBBBBB;
+    }
+    
+    #icon {
+        margin-top: 29px;
+    }
+    
+    #icon a{
+        margin-left: 250px;
+    }
+    
+    #conversation1 {
+        width: 512px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+        margin-left: 40px;
+        border-radius: 10px 10px 10px 0px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .timeConversation {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.71px;
+        color:rgba(187, 187, 187, 1);
+        margin-left: 39px;
+    }
+    
+    #conversation2 {
+        width: 512px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+        margin-left: 40px;
+        border-radius: 10px 10px 0px 10px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-left: 250px;
+        background-color: #538AF7;
+        color: white;
+    }
+    
+    #timeUser {
+        margin-left: 760px;
+    }
+    
+    #divClientOptions {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    
+    .clientOptions {
+        background-color: black;
+        color: white;
+        max-width: fit-content;
+        padding: 8px;
+        border-radius: 12px;
+    }
+    
+    .clientOptions:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.774);
+    }
+    
+    #inputText  {
+       padding: 10px; /* Reduce padding for better use of space */
+    }
+    
+    #inputText input {
+        padding: 10px;
+    
+    }
+    
+    #plusIcon {
+        margin-left: 15px;
+        margin-top: 20px;
+        
+    }
+    
+    #wrapperInputSend {
+        position: relative;
+    }
+    
+    #inputType {
+        position: absolute;
+        left: calc(100% - 50px);
+        bottom: 30px;
+    }
+    
+    input {
+        width: 290px;
+        height: 50px;
+        border-radius: 12px;
+        background-color: #F5F7F9;
+        padding-left: 0px;
+        margin: 20px;
+        border: none;
+        /* max-width: 100%; Set maximum width to prevent overflow */
+        width: calc(100% - 40px); 
+    
+    }
+    .centeredContainer {
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        margin-top: 20px; /* Add margin as needed */
+    }
+}

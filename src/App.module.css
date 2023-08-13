@@ -9,3 +9,21 @@
         flex-direction: column; /* Keep stacking items vertically on small screens */
     }
 }
+
+@media (max-width: 1024px) {
+    .application {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 1440px) {
+    .application {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 2560px) {
+    .application {
+        flex-direction: column; 
+    }
+}
