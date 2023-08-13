@@ -104,6 +104,7 @@ export function Chat({ characterId }) {
         if (conversationId) {
             console.log(getLastMessageId().count);
             try {
+                setIsTyping(true);
                 const response = await fetch(`${API_BASE_URL}/api/v1/chatbot/conversations/${conversationId}/messages/create/`, {
                     method: 'POST',
                     headers: {
@@ -125,6 +126,7 @@ export function Chat({ characterId }) {
                         is_from_user: false,
                         created_at: 'agora',
                     };
+                    setIsTyping(false);
                     console.log(data);
                     setConversation([...conversation, message, resp]);
                 } else {
@@ -143,15 +145,23 @@ export function Chat({ characterId }) {
         }
         return 0;
     };
-
+    const Typing = () => {
+        console.log('Typing component rendered'); // Add this line for debugging
+        return (
+            <div className={styles.typing}>
+                <div className={styles.typing__dot}></div>
+                <div className={styles.typing__dot}></div>
+                <div className={styles.typing__dot}></div>
+            </div>
+        );
+    };
 
     return (
         <div>
             <meta property="og:title" content={character.name}></meta>
             <header>
-                <title>{character.name}</title>
                 <div>
-                     <img className={styles.avatar} src={character.url_image} alt="" />
+                    <img className={styles.avatar} src={character.url_image} alt="" />
                 </div>
                 <div id={styles.userConversation}>
                     <h1>{character.name}</h1>
@@ -171,11 +181,12 @@ export function Chat({ characterId }) {
                     ) : (
                         <div key={index} id={styles.conversation1}>
                             <p>{message.content}</p>
-                            <time className={styles.timeConversation}>{message.created_at}</time>
+                            <time className={styles.timeConversation}>{message.created_at}</time> 
                         </div>
                     )
-                ))}
-
+                    ))}
+                <div> {isTyping ? <Typing /> : null }</div>
+             
             </div>
             <div id={styles.inputText}>
                 <div id={styles.wrapperInputSend}>
