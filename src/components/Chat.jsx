@@ -1,6 +1,6 @@
 import styles from './Chat.module.css';
 import { PaperPlaneTilt, ArrowCounterClockwise } from "@phosphor-icons/react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import API_BASE_URL from '../../apiConfig'; // Importe o URL da API
 
 
@@ -10,6 +10,8 @@ export function Chat({ characterId }) {
     const [conversationId, setConversationId] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const [character, setCharacter] = useState([]);
+    const bottomRef = useRef(null);
+
 
     useEffect(() => { 
         const fetchCharacter = async () => {
@@ -156,6 +158,10 @@ export function Chat({ characterId }) {
         );
     };
 
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+      }, [conversation]);
+
     return (
         <div>
             <meta property="og:title" content={character.name}></meta>
@@ -186,6 +192,7 @@ export function Chat({ characterId }) {
                     )
                     ))}
                 <div> {isTyping ? <Typing /> : null }</div>
+                <div ref={bottomRef} />
              
             </div>
             <div id={styles.inputText}>
