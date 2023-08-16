@@ -20,9 +20,8 @@ header {
 }
 
 header h1 {
-    line-height: 28.64px;
-    font-size: 24px;
-    font-weight: 700;
+   margin-left: 10px;
+   
 }
 
 #userConversation {
@@ -151,18 +150,21 @@ input {
     margin-top: 20px; /* Add margin as needed */
 }
 
+
 @media (min-width: 768px){
     .Chat {
         /* width: 100%; Set the same width as the input field */
-        width: 700px;
+        width: 750px;
+        height: 380px;
         padding-right: 15px; /* Adjust as needed */
+        margin: 0;
         
         
     }
     
     .avatar {
-        height: 58px;
-        width: 58px;
+        height: 65px;
+        width: 65px;
         border-radius: 50px;
     }
     
@@ -170,13 +172,15 @@ input {
         display: grid;
         grid-template-columns: 0.3fr 2fr 1fr;
         border-bottom: 1px solid rgb(209, 209, 209);
-        width: 700px;
+        width: 750px;
     }
     
     header h1 {
         line-height: 28.64px;
         font-size: 24px;
         font-weight: 700;
+        width: 400px;
+                
     }
     
     #userConversation {
@@ -195,18 +199,21 @@ input {
         font-weight: 500;
         line-height: 19.09px;
         color: #BBBBBB;
+        margin-left: 10px;
+
     }
     
     #icon {
         margin-top: 29px;
+        margin-left: 10px;
     }
     
     #icon a{
-        margin-left: 250px;
+        margin-left: 10px;
     }
     
     #conversation1 {
-        width: 512px;
+        width: 400px;
         border: none;
         box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
         margin-left: 40px;
@@ -221,15 +228,12 @@ input {
         font-size: 14px;
         line-height: 16.71px;
         color:rgba(187, 187, 187, 1);
-        margin-left: 39px;
+        margin-left: 3px;
     }
     
     #conversation2 {
-        width: 512px;
-        border: none;
-        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+        width: 420px;
         margin-left: 40px;
-        border-radius: 10px 10px 0px 10px;
         padding: 20px;
         margin-top: 20px;
         margin-bottom: 5px;
@@ -262,22 +266,21 @@ input {
     }
     
     #inputText  {
-       padding: 10px; /* Reduce padding for better use of space */
+       padding: 5px; /* Reduce padding for better use of space */
     }
     
     #inputText input {
-        padding: 10px;
+        padding: 5px;
+        width: 700px;
     
     }
     
-    #plusIcon {
-        margin-left: 15px;
-        margin-top: 20px;
-        
-    }
-    
+      
     #wrapperInputSend {
         position: relative;
+        width: 730px;
+        height: 80px;
+        
     }
     
     #inputType {
@@ -287,7 +290,7 @@ input {
     }
     
     input {
-        width: 290px;
+        width: 730px;
         height: 50px;
         border-radius: 12px;
         background-color: #F5F7F9;
@@ -295,7 +298,7 @@ input {
         margin: 20px;
         border: none;
         /* max-width: 100%; Set maximum width to prevent overflow */
-        width: calc(100% - 40px); 
+      
     
     }
     .centeredContainer {
@@ -308,17 +311,17 @@ input {
 }
     
 
-
 @media (min-width: 1024px) {
     
     .Chat {
         width: 1000px;/* width: 100%; Set the same width as the input field */
-        height: 350px;
+        height: 390px;
         overflow: scroll;
         padding-right: 15px; /* Adjust as needed */
         
-        
     }
+
+
     
      
     header {
@@ -342,6 +345,15 @@ input {
     header span {
        
         margin-left: 15px;
+    }
+    
+    #icon {
+        margin-top: 29px;
+        margin-left: 10px;
+    }
+    
+    #icon a{
+        margin-left: 250px;
     }
     
      
@@ -391,7 +403,7 @@ input {
     
      
     #inputText  {
-       padding: 10px; /* Reduce padding for better use of space */
+       padding: 0px; /* Reduce padding for better use of space */
     }
     
     #inputText input {
@@ -403,6 +415,7 @@ input {
     
     #wrapperInputSend {
         position: relative;
+        width: 1000px;
     }
     
     #inputType {
@@ -435,13 +448,17 @@ input {
     
     .Chat {
         width: 1410px;/* width: 100%; Set the same width as the input field */
-        height: 370px;
+        height: 350px;
         overflow: scroll;
         padding-right: 15px; /* Adjust as needed */
         
-        
     }
     
+    .avatar {
+        height: 75px;
+        width: 75px;
+        border-radius: 50px;
+    }
      
     header {
         width: 1430px;
@@ -452,6 +469,7 @@ input {
     
     header h1 {
         margin-left: 15px;
+        font-size: 30px;
     }
     
   
@@ -462,14 +480,22 @@ input {
     }
     
     header span {
-       
         margin-left: 15px;
+        font-size: 17px;
     }
 
     header icon {
         margin-left: 650px;
     }
     
+    #icon {
+        margin-top: 29px;
+        margin-left: 10px;
+    }
+    
+    #icon a{
+        margin-left: 350px;
+    }
      
     #conversation1 {
         width: 700px;
@@ -519,13 +545,13 @@ input {
     
     #inputText input {
         padding: 10px;
-        width: 960px;
+        width: 1350px;
     
     }
     
     
     #wrapperInputSend {
-        position: relative;
+        width: 1380px;
     }
     
     #inputType {
@@ -535,15 +561,14 @@ input {
     }
     
     input {
-       
+        width: 1380px; 
         height: 50px;
         border-radius: 12px;
         background-color: #F5F7F9;
         padding-left: 0px;
         margin: 20px;
         border: none;
-        /* max-width: 100%; Set maximum width to prevent overflow */
-        width: calc(100% - 40px); 
+        
     
     }
     .centeredContainer {
@@ -554,40 +579,36 @@ input {
     }
 }
 
-@media (min-width: 2560px) {
+ @media (min-width: 2560px) {
     
     .Chat {
-        /* width: 100%; Set the same width as the input field */
-        height: 650px;
+        width: 2500px;/* width: 100%; Set the same width as the input field */
+        height: 850px;
         overflow: scroll;
         padding-right: 15px; /* Adjust as needed */
-        
         
     }
     
     .avatar {
-        height: 58px;
-        width: 58px;
+        height: 120px;
+        width: 120px;
         border-radius: 50px;
     }
-    
+     
     header {
+        width: 2500px;
         display: grid;
         grid-template-columns: 0.3fr 2fr 1fr;
         border-bottom: 1px solid rgb(209, 209, 209);
     }
     
     header h1 {
-        line-height: 28.64px;
-        font-size: 24px;
-        font-weight: 700;
+        margin-left: 15px;
+        font-size: 40px;
+        width: 600px;
     }
     
-    #userConversation {
-        margin-right: 180px;
-        margin-top: 20px;
-    }
-    
+  
     header img {
         margin-left: 33px;
         margin-top: 18px;
@@ -595,22 +616,25 @@ input {
     }
     
     header span {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19.09px;
-        color: #BBBBBB;
+        margin-left: 15px;
+        font-size: 25px;
+    }
+
+    header icon {
+        margin-left: 650px;
     }
     
     #icon {
         margin-top: 29px;
+        margin-left: 10px;
     }
     
     #icon a{
-        margin-left: 250px;
+        margin-left: 350px;
     }
-    
+     
     #conversation1 {
-        width: 512px;
+        width: 700px;
         border: none;
         box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
         margin-left: 40px;
@@ -625,27 +649,17 @@ input {
         font-size: 14px;
         line-height: 16.71px;
         color:rgba(187, 187, 187, 1);
-        margin-left: 39px;
+        margin-left: 0px;
     }
     
     #conversation2 {
-        width: 512px;
-        border: none;
-        box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
-        margin-left: 40px;
-        border-radius: 10px 10px 0px 10px;
-        padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 5px;
-        margin-left: 250px;
+        width: 700px;
+        margin-left: 650px;
         background-color: #538AF7;
         color: white;
     }
     
-    #timeUser {
-        margin-left: 760px;
-    }
-    
+     
     #divClientOptions {
         display: flex;
         justify-content: space-around;
@@ -660,28 +674,20 @@ input {
         border-radius: 12px;
     }
     
-    .clientOptions:hover {
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.774);
-    }
-    
+     
     #inputText  {
        padding: 10px; /* Reduce padding for better use of space */
     }
     
     #inputText input {
         padding: 10px;
+        width: 1350px;
     
     }
     
-    #plusIcon {
-        margin-left: 15px;
-        margin-top: 20px;
-        
-    }
     
     #wrapperInputSend {
-        position: relative;
+        width: 1380px;
     }
     
     #inputType {
@@ -691,15 +697,14 @@ input {
     }
     
     input {
-        width: 290px;
+        width: 1380px; 
         height: 50px;
         border-radius: 12px;
         background-color: #F5F7F9;
         padding-left: 0px;
         margin: 20px;
         border: none;
-        /* max-width: 100%; Set maximum width to prevent overflow */
-        width: calc(100% - 40px); 
+        
     
     }
     .centeredContainer {
