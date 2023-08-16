@@ -1,8 +1,7 @@
 .Chat {
-    /* width: 100%; Set the same width as the input field */
-    height: 100%;
+    height: 650px;
     overflow: scroll;
-    /* padding-right: 15px; Adjust as needed */
+    padding-right: 15px;
     
     
 }
