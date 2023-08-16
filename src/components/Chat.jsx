@@ -35,8 +35,17 @@ export function Chat({ characterId }) {
                 } else {
                     createConversation();
                 }
-            } catch (error) {
-                console.error('Error:', error);
+            } catch (e) {
+                try {
+                    const retrocompatibilidade = localStorage.getItem('conversationId');
+                    if (retrocompatibilidade) {
+                        createConversation();
+                    } else {
+                        console.error('Error:', error);
+                    }
+                } catch (error) {
+                        console.error('Error:', error);
+                }
             }
         };
 
