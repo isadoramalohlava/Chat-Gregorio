@@ -29,9 +29,9 @@ export function Chat({ characterId }) {
     useEffect(() => {
         const fetchConversation = async () => {
             try {
-                const id = localStorage.getItem('conversationId');
-                if (id) {
-                    setConversationId(id);
+                const id = localStorage.getItem('conversationData');
+                if (id.characterId == characterId && id.conversationId) {
+                    setConversationId(id.conversationId);
                 } else {
                     createConversation();
                 }
@@ -57,7 +57,7 @@ export function Chat({ characterId }) {
             const data = await response.json();
             if (response.ok) {
                 setConversationId(data.id);
-                localStorage.setItem('conversationId', data.id);
+                localStorage.setItem('conversationData',JSON.stringify({'conversationId': data.id,'characterId':characterId}));
                 // Clear existing conversation messages when recreating
                 setConversation([]);
             } else {
@@ -147,8 +147,9 @@ export function Chat({ characterId }) {
         }
         return 0;
     };
+    
     const Typing = () => {
-        console.log('Typing component rendered'); // Add this line for debugging
+        // console.log('Typing component rendered'); // Add this line for debugging
         return (
             <div className={styles.typing}>
                 <div className={styles.typing__dot}></div>

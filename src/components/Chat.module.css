@@ -1,8 +1,7 @@
 .Chat {
-    /* width: 100%; Set the same width as the input field */
     height: 650px;
     overflow: scroll;
-    padding-right: 15px; /* Adjust as needed */
+    padding-right: 15px;
     
     
 }
@@ -44,11 +43,13 @@ header span {
 }
 
 #icon {
-    margin-top: 29px;
+    max-width: 25%;
+    /* margin-top: 29px; */
 }
 
 #icon a{
-    margin-left: 250px;
+    max-width: 25%;
+    /* margin-left: 250px; */
 }
 
 #conversation1 {
@@ -202,3 +203,4 @@ input {
     opacity: 0;
   }
 }
+

@@ -9,3 +9,4 @@
         flex-direction: column; /* Keep stacking items vertically on small screens */
     }
 }
+body {margin:0;padding:0}
