@@ -10,20 +10,4 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .application {
-        flex-direction: column; 
-    }
-}
-
-@media (max-width: 1440px) {
-    .application {
-        flex-direction: column; 
-    }
-}
-
-@media (max-width: 2560px) {
-    .application {
-        flex-direction: column; 
-    }
-}
+body {margin:0;padding:0}

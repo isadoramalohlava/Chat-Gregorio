@@ -1,6 +1,6 @@
 import styles from './Chat.module.css';
 import { PaperPlaneTilt, ArrowCounterClockwise } from "@phosphor-icons/react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import API_BASE_URL from '../../apiConfig'; // Importe o URL da API
 
 
@@ -10,6 +10,8 @@ export function Chat({ characterId }) {
     const [conversationId, setConversationId] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const [character, setCharacter] = useState([]);
+    const bottomRef = useRef(null);
+
 
     useEffect(() => { 
         const fetchCharacter = async () => {
@@ -27,14 +29,23 @@ export function Chat({ characterId }) {
     useEffect(() => {
         const fetchConversation = async () => {
             try {
-                const id = localStorage.getItem('conversationId');
-                if (id) {
-                    setConversationId(id);
+                const id = localStorage.getItem('conversationData');
+                if (id.characterId == characterId && id.conversationId) {
+                    setConversationId(id.conversationId);
                 } else {
                     createConversation();
                 }
-            } catch (error) {
-                console.error('Error:', error);
+            } catch (e) {
+                try {
+                    const retrocompatibilidade = localStorage.getItem('conversationId');
+                    if (retrocompatibilidade) {
+                        createConversation();
+                    } else {
+                        console.error('Error:', error);
+                    }
+                } catch (error) {
+                        console.error('Error:', error);
+                }
             }
         };
 
@@ -55,7 +66,7 @@ export function Chat({ characterId }) {
             const data = await response.json();
             if (response.ok) {
                 setConversationId(data.id);
-                localStorage.setItem('conversationId', data.id);
+                localStorage.setItem('conversationData',JSON.stringify({'conversationId': data.id,'characterId':characterId}));
                 // Clear existing conversation messages when recreating
                 setConversation([]);
             } else {
@@ -104,6 +115,7 @@ export function Chat({ characterId }) {
         if (conversationId) {
             console.log(getLastMessageId().count);
             try {
+                setIsTyping(true);
                 const response = await fetch(`${API_BASE_URL}/api/v1/chatbot/conversations/${conversationId}/messages/create/`, {
                     method: 'POST',
                     headers: {
@@ -125,6 +137,7 @@ export function Chat({ characterId }) {
                         is_from_user: false,
                         created_at: 'agora',
                     };
+                    setIsTyping(false);
                     console.log(data);
                     setConversation([...conversation, message, resp]);
                 } else {
@@ -143,15 +156,28 @@ export function Chat({ characterId }) {
         }
         return 0;
     };
+    
+    const Typing = () => {
+        // console.log('Typing component rendered'); // Add this line for debugging
+        return (
+            <div className={styles.typing}>
+                <div className={styles.typing__dot}></div>
+                <div className={styles.typing__dot}></div>
+                <div className={styles.typing__dot}></div>
+            </div>
+        );
+    };
 
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+      }, [conversation]);
 
     return (
         <div>
             <meta property="og:title" content={character.name}></meta>
             <header>
-                <title>{character.name}</title>
                 <div>
-                     <img className={styles.avatar} src={character.url_image} alt="" />
+                    <img className={styles.avatar} src={character.url_image} alt="" />
                 </div>
                 <div id={styles.userConversation}>
                     <h1>{character.name}</h1>
@@ -171,11 +197,13 @@ export function Chat({ characterId }) {
                     ) : (
                         <div key={index} id={styles.conversation1}>
                             <p>{message.content}</p>
-                            <time className={styles.timeConversation}>{message.created_at}</time>
+                            <time className={styles.timeConversation}>{message.created_at}</time> 
                         </div>
                     )
-                ))}
-
+                    ))}
+                <div> {isTyping ? <Typing /> : null }</div>
+                <div ref={bottomRef} />
+             
             </div>
             <div id={styles.inputText}>
                 <div id={styles.wrapperInputSend}>

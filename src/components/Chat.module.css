@@ -1,13 +1,17 @@
 .Chat {
-    /* width: 100%; Set the same width as the input field */
     height: 650px;
     overflow: scroll;
+<<<<<<< HEAD
     padding: 0, 0, 10px, 0; /* Adjust as needed */
     background-color: white;  
     width: 90%;
     position: fixed;
     top: 20%;
     bottom: 10%;
+=======
+    padding-right: 15px;
+    
+>>>>>>> af7fea19ee8f2a900b62175ae162043ca9b3fb6b
     
 }
 
@@ -54,20 +58,22 @@ header span {
 }
 
 #icon {
-    margin-top: 29px;
+    max-width: 25%;
+    /* margin-top: 29px; */
 }
 
 #icon a{
-    margin-left: 250px;
+    max-width: 25%;
+    /* margin-left: 250px; */
 }
 
 #conversation1 {
-    width: 512px;
+    max-width: 75%;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
     margin-left: 40px;
     border-radius: 10px 10px 10px 0px;
-    padding: 20px;
+    padding: 5px 5px 5px 10px;
     margin-top: 20px;
     margin-bottom: 5px;
 }
@@ -81,15 +87,15 @@ header span {
 }
 
 #conversation2 {
-    width: 512px;
+    max-width: 75%;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
-    margin-left: 40px;
+    margin-right: 40px;
     border-radius: 10px 10px 0px 10px;
-    padding: 20px;
+    padding: 5px 5px 5px 10px;
     margin-top: 20px;
     margin-bottom: 5px;
-    margin-left: 250px;
+    margin-left: 25%;
     background-color: #538AF7;
     color: white;
 }
@@ -117,12 +123,18 @@ header span {
     background-color: rgba(0, 0, 0, 0.774);
 }
 
+<<<<<<< HEAD
 #inputText  {
    width: 90%;
    padding: 0px; /* Reduce padding for better use of space */
    position: fixed;
    bottom: 5%;
    
+=======
+#inputText input {
+    padding: 10px;
+
+>>>>>>> af7fea19ee8f2a900b62175ae162043ca9b3fb6b
 }
 
 #inputText input {
@@ -132,7 +144,6 @@ header span {
     bottom: 5%;
 
 }
-
 #plusIcon {
     margin-left: 15px;
     margin-top: 20px;
@@ -171,6 +182,7 @@ input {
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
     margin-top: 20px; /* Add margin as needed */
+<<<<<<< HEAD
     position: fixed;
     bottom: 0;
     right: 50%;
@@ -178,4 +190,59 @@ input {
 
 
 
+=======
+}
+.typing {
+  width: 5em;
+  height: 2em;
+  position: relative;
+  padding: 10px;
+  margin-left: 5px;
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 75%;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+  margin-left: 40px;
+  border-radius: 10px 10px 10px 0px;
+  padding: 5px 5px 5px 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.typing__dot {
+  float: left;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background: #8d8c91;
+  border-radius: 50%;
+  opacity: 0;
+  animation: loadingFade 1s infinite;
+}
+
+.typing__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing__dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing__dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+>>>>>>> af7fea19ee8f2a900b62175ae162043ca9b3fb6b
 
