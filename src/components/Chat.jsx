@@ -210,6 +210,7 @@ export function Chat({ characterId }) {
                     <div id={styles.inputType}>
                         <a type="button" href=""><PaperPlaneTilt size={32} color='#BBBBBB' onClick={sendMessage}/></a>
                     </div>
+
                     <input type="text" placeholder='Enviar mensagem...' id={styles.inputConversation} value={newMessage} onChange={(e) => setNewMessage(e.target.value)}/>
                 </div>
             </div>
@@ -217,5 +218,5 @@ export function Chat({ characterId }) {
             <div id={styles.micIcon}>Powered By <b>DubleDigital</b></div>
         </div>
         </div>
-    );
+    );
 };

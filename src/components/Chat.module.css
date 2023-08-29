@@ -1,41 +1,53 @@
-.Chat {
-    height: 650px;
-    overflow: scroll;
-<<<<<<< HEAD
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+#apli{
+    position: relative !important;
+}
+
+
+.Chat {     
+    text-rendering: optimizeLegibility;
+    width: 99% !important;
+    height: 65%;
+    overflow: auto;
     padding: 0, 0, 10px, 0; /* Adjust as needed */
     background-color: white;  
     width: 90%;
     position: fixed;
-    top: 20%;
+    top: 15%;
     bottom: 10%;
-=======
-    padding-right: 15px;
-    
->>>>>>> af7fea19ee8f2a900b62175ae162043ca9b3fb6b
-    
+    min-width: 90%;
+    min-height: 65%;
+      
 }
 
 .avatar {
-    height: 58px;
-    width: 58px;
-    border-radius: 50px;
-    position: fixed;
-    top: 0%;
-    left: 0%;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    
 }
 
 header {
+    text-rendering: optimizeLegibility;
     display: grid;
     grid-template-columns: 0.3fr 2fr 1fr;
     border-bottom: 1px solid rgb(209, 209, 209);
     background-color: white;
-    position: fixed;
+    position: absolute !important;
     top: 0;
-    width: calc(100% - 50px);
+    width: 100% ;
+    height: 80px;
 }
 
 header h1 {
-   margin-left: 10px;
+   top: 15px;
+   font-size: 2em;
+   position: absolute !important;
+   margin-left: 20px;
    
 }
 
@@ -45,9 +57,10 @@ header h1 {
 }
 
 header img {
-    margin-left: 33px;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    
+    margin-top: 0.625rem;
+    position: fixed;
+    left: 2%
 }
 
 header span {
@@ -55,27 +68,35 @@ header span {
     font-weight: 500;
     line-height: 19.09px;
     color: #BBBBBB;
+    position: fixed;
+    top: 50px;
+    margin-left: 25px;
 }
 
 #icon {
-    max-width: 25%;
-    /* margin-top: 29px; */
+    margin-top: 2rem;
+    position: relative;
+    top: 5%;
+    right: 3%;
 }
 
 #icon a{
-    max-width: 25%;
-    /* margin-left: 250px; */
+    margin-left: 10%;
+    position: relative;
+    bottom: 20%;
+    left: 40%;
+
 }
 
 #conversation1 {
-    max-width: 75%;
+    width: 40%;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
     margin-left: 40px;
     border-radius: 10px 10px 10px 0px;
-    padding: 5px 5px 5px 10px;
-    margin-top: 20px;
+    padding: 20px;
     margin-bottom: 5px;
+   
 }
 
 .timeConversation {
@@ -83,21 +104,22 @@ header span {
     font-size: 14px;
     line-height: 16.71px;
     color:rgba(187, 187, 187, 1);
-    margin-left: 39px;
+    margin-left: 0px;
 }
 
 #conversation2 {
-    max-width: 75%;
+    width: 40%;
+    height: fit-content;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
-    margin-right: 40px;
     border-radius: 10px 10px 0px 10px;
-    padding: 5px 5px 5px 10px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-left: 25%;
+    padding: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 58%;
     background-color: #538AF7;
     color: white;
+    
 }
 
 #timeUser {
@@ -123,27 +145,15 @@ header span {
     background-color: rgba(0, 0, 0, 0.774);
 }
 
-<<<<<<< HEAD
 #inputText  {
-   width: 90%;
+   width: 100%;
    padding: 0px; /* Reduce padding for better use of space */
    position: fixed;
-   bottom: 5%;
-   
-=======
-#inputText input {
-    padding: 10px;
-
->>>>>>> af7fea19ee8f2a900b62175ae162043ca9b3fb6b
+   bottom: 15%;
+      
 }
 
-#inputText input {
-    padding: 10px;
-    width: calc(100% - 100px);
-    position: fixed;
-    bottom: 5%;
 
-}
 #plusIcon {
     margin-left: 15px;
     margin-top: 20px;
@@ -152,97 +162,103 @@ header span {
 
 #wrapperInputSend {
     position: fixed;
-    bottom: 5%;
+    bottom: 3%;
     right: 90%;
     width: 10%;
+    height: 2%;
+}
+
+#wrapperInputSend a {
+    position: fixed;
+    left: 100%;
+}
+
+
+input {
+    width: 90% !important;
+    height: 7%;
+    border-radius: 50px;
+    background-color: #f5f7f9;
+    padding: 0px 0px 0px 10px;
+    margin: 10px;
+    border: none;
+    position: fixed;
+    bottom: 5%;
+       
+
 }
 
 #inputType {
-    position: fixed;
-    left: 90%;
-    bottom: 5%;
-    width: 90%;
+    position: relative;
+    left: 820%;
+    bottom: 10%;
+    
 }
 
-input {
-    width: calc(100% - 100px);
-    height: 50px;
-    border-radius: 12px;
-    background-color: #f5f7f9;
-    padding-left: 0px;
-    margin: 20px;
-    border: none;
+#inputType a {
     position: absolute;
-    
-    
-
+    bottom: 10%;
+    padding: 10px;
 }
 .centeredContainer {
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
     margin-top: 20px; /* Add margin as needed */
-<<<<<<< HEAD
     position: fixed;
     bottom: 0;
-    right: 50%;
+    right: 45%;
 }
 
-
-
-=======
-}
 .typing {
-  width: 5em;
-  height: 2em;
-  position: relative;
-  padding: 10px;
-  margin-left: 5px;
-  background: #ffffff;
-  border-radius: 20px;
-  max-width: 75%;
-  border: none;
-  box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
-  margin-left: 40px;
-  border-radius: 10px 10px 10px 0px;
-  padding: 5px 5px 5px 10px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.typing__dot {
-  float: left;
-  width: 8px;
-  height: 8px;
-  margin: 0 4px;
-  background: #8d8c91;
-  border-radius: 50%;
-  opacity: 0;
-  animation: loadingFade 1s infinite;
-}
-
-.typing__dot:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.typing__dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.typing__dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes loadingFade {
-  0% {
+    width: 5em;
+    height: 2em;
+    position: relative;
+    padding: 10px;
+    margin-left: 5px;
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 75%;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
+    margin-left: 40px;
+    border-radius: 10px 10px 10px 0px;
+    padding: 5px 5px 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .typing__dot {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background: #8d8c91;
+    border-radius: 50%;
     opacity: 0;
+    animation: loadingFade 1s infinite;
   }
-  50% {
-    opacity: 0.8;
+  
+  .typing__dot:nth-child(1) {
+    animation-delay: 0s;
   }
-  100% {
-    opacity: 0;
+  
+  .typing__dot:nth-child(2) {
+    animation-delay: 0.2s;
   }
-}
->>>>>>> af7fea19ee8f2a900b62175ae162043ca9b3fb6b
-
+  
+  .typing__dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes loadingFade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
