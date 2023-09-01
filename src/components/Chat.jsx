@@ -38,10 +38,10 @@ export function Chat({ characterId }) {
             } catch (e) {
                 try {
                     const retrocompatibilidade = localStorage.getItem('conversationId');
-                    if (retrocompatibilidade) {
+                    if (retrocompatibilidade || 1) {
                         createConversation();
                     } else {
-                        console.error('Error:', error);
+                        console.error('Error:');
                     }
                 } catch (error) {
                         console.error('Error:', error);
@@ -63,6 +63,7 @@ export function Chat({ characterId }) {
                     character: characterId,
                 }),
             });
+            
             const data = await response.json();
             if (response.ok) {
                 setConversationId(data.id);
@@ -94,7 +95,7 @@ export function Chat({ characterId }) {
         }
     }, [conversationId]);
 
-    const sendMessage = async () => {
+    const sendMessage = async (event) => {//
         event.preventDefault();
         if (newMessage.trim() === '') {
             setNewMessage('');
@@ -173,18 +174,18 @@ export function Chat({ characterId }) {
       }, [conversation]);
 
     return (
-        <div>
+        <div id={styles.container}>
             <meta property="og:title" content={character.name}></meta>
             <header>
                 <div>
                     <img className={styles.avatar} src={character.url_image} alt="" />
                 </div>
                 <div id={styles.userConversation}>
-                    <h1>{character.name}</h1>
+                    <h1>{character.name ?? 'Carlos Roberto'}</h1>
                     <span>Disponível</span>
                 </div>
                 <div id={styles.icon}>
-                    <a onClick={createConversation} ><ArrowCounterClockwise size={32} /></a>
+                    <a onClick={createConversation} ><ArrowCounterClockwise/></a>
                 </div>
             </header>
             <div className={styles.Chat}>
@@ -207,11 +208,11 @@ export function Chat({ characterId }) {
             </div>
             <div id={styles.inputText}>
                 <div id={styles.wrapperInputSend}>
-                    <div id={styles.inputType}>
-                        <a type="button" href=""><PaperPlaneTilt size={32} color='#BBBBBB' onClick={sendMessage}/></a>
-                    </div>
+                   
+                        <a type="button" href="" id={styles.inputType}><PaperPlaneTilt color='#BBBBBB' onClick={sendMessage}/></a>
+                    
 
-                    <input type="text" placeholder='Enviar mensagem...' id={styles.inputConversation} value={newMessage} onChange={(e) => setNewMessage(e.target.value)}/>
+                    <input type="text" placeholder='Enviar mensagem...' id={styles.inputConversation} value={newMessage} onChange={(e) => setNewMessage(e.target.value)} onKeyDown={(ev) => ev.key == 'Enter' ? sendMessage(ev) : ''}/>
                 </div>
             </div>
             <div className={styles.centeredContainer}>
@@ -219,4 +220,4 @@ export function Chat({ characterId }) {
         </div>
         </div>
     );
-};
+}
