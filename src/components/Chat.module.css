@@ -6,11 +6,15 @@ html {
     position: relative !important;
 }
 
+#container {
+    position: relative;
+}
+
 
 .Chat {     
     text-rendering: optimizeLegibility;
     width: 99% !important;
-    height: 65%;
+    height: 65vh;
     overflow: auto;
     padding: 0, 0, 10px, 0; /* Adjust as needed */
     background-color: white;  
@@ -24,75 +28,60 @@ html {
 }
 
 .avatar {
-    height: 4rem;
-    width: 4rem;
+    height: 4.5vw;
+    width: 4.5vw;
     border-radius: 50%;
-    display: flex;
-    
+    margin-top: 0.7vw;
+    position: fixed;
+    left: 2%;
 }
 
 header {
+    position: fixed;
     text-rendering: optimizeLegibility;
     display: grid;
     grid-template-columns: 0.3fr 2fr 1fr;
-    border-bottom: 1px solid rgb(209, 209, 209);
+    border-bottom: 0.1vw solid rgb(209, 209, 209);
     background-color: white;
     position: absolute !important;
     top: 0;
-    width: 100% ;
-    height: 80px;
+    width: 100%;
+    height: 6vw;
 }
 
 header h1 {
-   top: 15px;
-   font-size: 2em;
+   top: 1vw;
+   font-size: 3vw;
    position: absolute !important;
-   margin-left: 20px;
-   
 }
 
 #userConversation {
-    margin-right: 180px;
-    margin-top: 20px;
-}
-
-header img {
-    
-    margin-top: 0.625rem;
-    position: fixed;
-    left: 2%
+    margin-top: 1vw;
 }
 
 header span {
-    font-size: 16px;
+    font-size: 1vw;
     font-weight: 500;
-    line-height: 19.09px;
     color: #BBBBBB;
-    position: fixed;
-    top: 50px;
-    margin-left: 25px;
-}
-
-#icon {
-    margin-top: 2rem;
-    position: relative;
-    top: 5%;
-    right: 3%;
+    position: absolute;
+    top: 4vw;
 }
 
 #icon a{
     margin-left: 10%;
-    position: relative;
+    position: absolute;
     bottom: 20%;
-    left: 40%;
-
+    right: 10vw;
+    top: 50%;
+    font-size: 2vw;
+    transform: translateY(-50%);
 }
 
 #conversation1 {
     width: 40%;
     border: none;
     box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.3);
-    margin-left: 40px;
+    margin-left: 3vw;
     border-radius: 10px 10px 10px 0px;
     padding: 20px;
     margin-bottom: 5px;
@@ -101,7 +90,7 @@ header span {
 
 .timeConversation {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 16.71px;
     color:rgba(187, 187, 187, 1);
     margin-left: 0px;
@@ -146,11 +135,10 @@ header span {
 }
 
 #inputText  {
-   width: 100%;
+   width: 100vw;
    padding: 0px; /* Reduce padding for better use of space */
    position: fixed;
-   bottom: 15%;
-      
+   bottom: 14%;
 }
 
 
@@ -161,45 +149,34 @@ header span {
 }
 
 #wrapperInputSend {
-    position: fixed;
-    bottom: 3%;
-    right: 90%;
-    width: 10%;
-    height: 2%;
+    position: absolute;
+    top: 100%;
+    width: 97vw;
+    left: 50%;
+    height: 5vw;
+    transform: translateX(-50%);
 }
 
 #wrapperInputSend a {
-    position: fixed;
-    left: 100%;
+    position: absolute;
+    z-index: 1;
+    right: 0%;
+    bottom: -1px;
+    padding: 1vw;
+    font-size: 3vw;
 }
 
 
 input {
-    width: 90% !important;
-    height: 7%;
-    border-radius: 50px;
+    width: 100% !important;
+    height: 4vw;
+    border-radius: 10px;
     background-color: #f5f7f9;
     padding: 0px 0px 0px 10px;
-    margin: 10px;
+    margin-bottom: 10px;
     border: none;
-    position: fixed;
-    bottom: 5%;
-       
-
 }
 
-#inputType {
-    position: relative;
-    left: 820%;
-    bottom: 10%;
-    
-}
-
-#inputType a {
-    position: absolute;
-    bottom: 10%;
-    padding: 10px;
-}
 .centeredContainer {
     display: flex;
     justify-content: center; /* Horizontally center the content */
@@ -208,6 +185,11 @@ input {
     position: fixed;
     bottom: 0;
     right: 45%;
+}
+
+#micIcon {
+    font-size: 1vw;
+    margin-bottom: 0.5vw;
 }
 
 .typing {
@@ -262,3 +244,35 @@ input {
       opacity: 0;
     }
   }
+
+@media screen and (max-width: 568px) {
+
+    #wrapperInputSend {
+        height: 7vw;
+    }
+
+    #wrapperInputSend a {
+        bottom: 1px;
+        right: 1%;
+    }
+
+    input {
+        height: 7vw;
+    }
+
+    #inputText {
+        bottom: 22%;
+    }
+}
+
+@media screen and (min-width: 1740px) {
+    #wrapperInputSend {
+        bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    #wrapperInputSend {
+        bottom: 60px;
+    }
+}

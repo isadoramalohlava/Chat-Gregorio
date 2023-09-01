@@ -42,7 +42,7 @@ export function Sidebar({ setActiveChat }) {
            
             <div className={styles.wrapper}>
                 <div className={styles.icon}><MagnifyingGlass size={32} color='#BBBBBB'/></div>
-                <input type="text" name="" id="" placeholder='Procurar...'/>       
+                <input type="text" name="" id="" className={styles.input} placeholder='Procurar...'/>       
             </div>
 
             <div>
