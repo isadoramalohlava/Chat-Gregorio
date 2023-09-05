@@ -10,7 +10,7 @@ export function Chat({ characterId }) {
     const [conversationId, setConversationId] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const [character, setCharacter] = useState([]);
-    const bottomRef = useRef(null);
+    const messagesEndRef = useRef(null);
 
 
     useEffect(() => { 
@@ -192,7 +192,7 @@ export function Chat({ characterId }) {
                     <a onClick={createConversation} ><ArrowCounterClockwise/></a>
                 </div>
             </header>
-            <div className={styles.Chat} ref={bottomRef}>
+            <div className={styles.Chat} ref={messagesEndRef}>
                  {conversation.map((message, index) => (
                     message.is_from_user ? (
                         <div key={index} id={styles.conversation2}>
