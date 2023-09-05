@@ -169,9 +169,13 @@ export function Chat({ characterId }) {
         );
     };
 
+    const scrollToBottom = () => {
+        const chatContainer = messagesEndRef.current;
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    };
     useEffect(() => {
-        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
-      }, [conversation]);
+        scrollToBottom();
+    }, [conversation]);
 
     return (
         <div id={styles.container}>
@@ -188,7 +192,7 @@ export function Chat({ characterId }) {
                     <a onClick={createConversation} ><ArrowCounterClockwise/></a>
                 </div>
             </header>
-            <div className={styles.Chat}>
+            <div className={styles.Chat} ref={bottomRef}>
                  {conversation.map((message, index) => (
                     message.is_from_user ? (
                         <div key={index} id={styles.conversation2}>
@@ -203,8 +207,6 @@ export function Chat({ characterId }) {
                     )
                     ))}
                 <div> {isTyping ? <Typing /> : null }</div>
-                <div ref={bottomRef} />
-             
             </div>
             <div id={styles.inputText}>
                 <div id={styles.wrapperInputSend}>
