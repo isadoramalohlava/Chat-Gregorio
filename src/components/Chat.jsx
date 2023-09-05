@@ -193,7 +193,7 @@ export function Chat({ characterId }) {
                     message.is_from_user ? (
                         <div key={index} id={styles.conversation2}>
                             <p>{message.content}</p>
-                            <time className={styles.timeConversation}>{message.created_at}</time>
+                           
                         </div>
                     ) : (
                         <div key={index} id={styles.conversation1}>
