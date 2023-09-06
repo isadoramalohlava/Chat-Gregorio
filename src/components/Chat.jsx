@@ -216,7 +216,7 @@ export function Chat({ characterId }) {
                 </div>
             </div>
             <div className={styles.centeredContainer}>
-            <div id={styles.micIcon}>Powered By <b>DubleDigital</b></div>
+            <div id={styles.micIcon}>Powered By <a href='www.dubledigital.com.br' target="_blank" ><b> DubleDigital</b></a>  </div>
         </div>
         </div>
     );
