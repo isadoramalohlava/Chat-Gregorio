@@ -30,6 +30,7 @@ html {
 .avatar {
     height: 4.5vw;
     width: 4.5vw;
+
     border-radius: 50%;
     margin-top: 0.7vw;
     position: fixed;
@@ -51,11 +52,11 @@ header {
 
 header h1 {
    top: 1vw;
-   font-size: 3vw;
    position: absolute !important;
 }
 
 #userConversation {
+    font-size: 1.5vw;
     margin-top: 1vw;
 }
 
@@ -154,7 +155,7 @@ header span {
     top: 100%;
     width: 97vw;
     left: 50%;
-    height: 5vw;
+    height: 6vw;
     transform: translateX(-50%);
 }
 
@@ -162,7 +163,7 @@ header span {
     position: absolute;
     z-index: 1;
     right: 0%;
-    bottom: -1px;
+    bottom: 0.9vw;
     padding: 1vw;
     font-size: 3vw;
 }
@@ -262,7 +263,45 @@ input {
     }
 
     #inputText {
-        bottom: 22%;
+        bottom: 7%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #conversation1 {
+        width: 95%;
+    }
+
+    #conversation2 {
+        width: 95%;
+        margin-left: 3%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    header {
+        max-height: 65px;
+    }   
+
+    header h1 {
+        top: 10px;
+    }
+
+    .avatar {
+        max-width: 45px;
+        max-height: 45px;
+    }
+
+    #userConversation {
+        font-size: 15px;
+    }
+
+    header span {
+        font-size: 1vw;
+        font-weight: 500;
+        color: #BBBBBB;
+        position: absolute;
+        top: 40px;
     }
 }
 
