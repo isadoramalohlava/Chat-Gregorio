@@ -30,7 +30,6 @@ html {
 .avatar {
     height: 4.5vw;
     width: 4.5vw;
-
     border-radius: 50%;
     margin-top: 0.7vw;
     position: fixed;
@@ -167,8 +166,7 @@ header span {
     position: absolute;
     z-index: 1;
     right: 0%;
-    bottom: 0.9vw;
-    bottom: 0.9px;
+    bottom: 1vw;
     padding: 1vw;
     font-size: 3vw;
 }
@@ -179,8 +177,7 @@ input {
     height: 4vw;
     border-radius: 10px;
     background-color: #f5f7f9;
-    padding: 0px 0px 0px 10px;
-    margin-bottom: 50px !important; 
+    padding: 0px 0px 0px 10px; 
     border: none;
 
 }
@@ -269,7 +266,7 @@ input {
     }
 
     #inputText {
-        bottom: 7%;
+        bottom: 22%;
     }
 }
 
@@ -281,33 +278,6 @@ input {
     #conversation2 {
         width: 95%;
         margin-left: 3%;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    header {
-        max-height: 65px;
-    }   
-
-    header h1 {
-        top: 10px;
-    }
-
-    .avatar {
-        max-width: 45px;
-        max-height: 45px;
-    }
-
-    #userConversation {
-        font-size: 15px;
-    }
-
-    header span {
-        font-size: 1vw;
-        font-weight: 500;
-        color: #BBBBBB;
-        position: absolute;
-        top: 40px;
     }
 }
 
