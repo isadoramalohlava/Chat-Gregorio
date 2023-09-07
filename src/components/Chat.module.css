@@ -34,6 +34,7 @@ html {
     margin-top: 0.7vw;
     position: fixed;
     left: 2%;
+
 }
 
 header {
@@ -47,11 +48,12 @@ header {
     top: 0;
     width: 100%;
     height: 6vw;
+
 }
 
 header h1 {
    top: 1vw;
-   font-size: 3vw;
+   font-size: 2vw;
    position: absolute !important;
 }
 
@@ -64,7 +66,7 @@ header span {
     font-weight: 500;
     color: #BBBBBB;
     position: absolute;
-    top: 4vw;
+    top: 3.3vw;
 }
 
 #icon a{
@@ -154,7 +156,7 @@ header span {
     top: 100%;
     width: 97vw;
     left: 50%;
-    height: 5vw;
+    height: 6vw;
     transform: translateX(-50%);
 }
 
@@ -162,7 +164,7 @@ header span {
     position: absolute;
     z-index: 1;
     right: 0%;
-    bottom: -1px;
+    bottom: 0.9px;
     padding: 1vw;
     font-size: 3vw;
 }
@@ -174,8 +176,9 @@ input {
     border-radius: 10px;
     background-color: #f5f7f9;
     padding: 0px 0px 0px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 50px !important; 
     border: none;
+
 }
 
 .centeredContainer {
@@ -189,7 +192,7 @@ input {
 }
 
 #micIcon {
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin-bottom: 0.5vw;
 }
 
