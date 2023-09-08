@@ -202,7 +202,7 @@ export function Chat({ characterId }) {
                     ) : (
                         <div key={index} id={styles.conversation1}>
                             <p>{message.content}</p>
-                            <time className={styles.timeConversation}>{message.created_at}</time> 
+                            {/* <time className={styles.timeConversation}>{message.created_at}</time>  */}
                         </div>
                     )
                     ))}
