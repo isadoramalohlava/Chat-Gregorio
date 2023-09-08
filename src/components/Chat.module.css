@@ -247,7 +247,10 @@ input {
     }
   }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 500px) {
+    header {
+        max-height: 50px;
+    } 
 
     #wrapperInputSend {
         height: 7vw;
@@ -263,8 +266,32 @@ input {
     }
 
     #inputText {
-        bottom: 7%;
+        bottom: 10%;
     }
+
+    #micIcon {
+        font-size: 2.5vw;
+        margin-bottom: 0.5vw;
+    }
+    #userConversation {
+        margin-left: 5%;
+        font-size: 2.5vw;
+    }
+    .avatar {
+        height: 8.5vw;
+        width: 8.5vw;
+        border-radius: 50%;
+        margin-top: 0.7vw;
+        position: fixed;
+        left: 2%;
+    }
+    header span {
+        display: none;
+    }
+    #icon a{
+        font-size: 5vw;
+    }
+    
 }
 
 @media screen and (max-width: 900px) {
@@ -314,5 +341,18 @@ input {
 @media screen and (min-width: 3000px) {
     #wrapperInputSend {
         bottom: 60px;
+    }
+}
+@media screen and (max-width: 500px) {
+    header {
+        height: 80px; /* Set the desired height for the header */
+    }
+
+    header h1 {
+        top: 5px; /* Adjust the top positioning as needed */
+    }
+
+    header span {
+        top: 20px; /* Adjust the top positioning as needed */
     }
 }

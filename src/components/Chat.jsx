@@ -185,7 +185,7 @@ export function Chat({ characterId }) {
                     <img className={styles.avatar} src={character.url_image} alt="" />
                 </div>
                 <div id={styles.userConversation}>
-                    <h1>{character.name ?? 'Carlos Roberto'}</h1>
+                    <h1>{character.name ?? 'Duble Digital'}</h1>
                     <span>Disponível</span>
                 </div>
                 <div id={styles.icon}>
