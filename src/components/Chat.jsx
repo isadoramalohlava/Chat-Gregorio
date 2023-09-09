@@ -29,28 +29,26 @@ export function Chat({ characterId }) {
     useEffect(() => {
         const fetchConversation = async () => {
             try {
-                const id = localStorage.getItem('conversationData');
-                if (id.characterId == characterId && id.conversationId) {
+                let id = localStorage.getItem('conversationData');
+                if (!id) {
+                    // If not found in localStorage, try sessionStorage
+                    id = sessionStorage.getItem('conversationData');
+                }
+                
+                if (id && id.characterId == characterId && id.conversationId) {
                     setConversationId(id.conversationId);
                 } else {
                     createConversation();
                 }
             } catch (e) {
-                try {
-                    const retrocompatibilidade = localStorage.getItem('conversationId');
-                    if (retrocompatibilidade || 1) {
-                        createConversation();
-                    } else {
-                        console.error('Error:');
-                    }
-                } catch (error) {
-                        console.error('Error:', error);
-                }
+                    console.error('Error:', error);
+
             }
         };
-
+    
         fetchConversation();
     }, [characterId]);
+
 
     const createConversation = async () => {
         try {
@@ -67,7 +65,16 @@ export function Chat({ characterId }) {
             const data = await response.json();
             if (response.ok) {
                 setConversationId(data.id);
-                localStorage.setItem('conversationData',JSON.stringify({'conversationId': data.id,'characterId':characterId}));
+                try{
+                    localStorage.setItem('conversationData',JSON.stringify({'conversationId': data.id,'characterId':characterId}));
+                }catch{
+                    try{
+                    sessionStorage.setItem('conversationData',JSON.stringify({'conversationId': data.id,'characterId':characterId}));
+                    }
+                    catch(e){
+                        console.error('Error:', e);
+                    }
+                }
                 // Clear existing conversation messages when recreating
                 setConversation([]);
             } else {
@@ -185,7 +192,7 @@ export function Chat({ characterId }) {
                     <img className={styles.avatar} src={character.url_image} alt="" />
                 </div>
                 <div id={styles.userConversation}>
-                    <h1>{character.name ?? 'Carlos Roberto'}</h1>
+                    <h1>{character.name ?? 'Duble Digital'}</h1>
                     <span>Disponível</span>
                 </div>
                 <div id={styles.icon}>
@@ -203,6 +210,7 @@ export function Chat({ characterId }) {
                         <div key={index} id={styles.conversation1}>
                             <p>{message.content}</p>
                             
+                            {/* <time className={styles.timeConversation}>{message.created_at}</time>  */}
                         </div>
                     )
                     ))}

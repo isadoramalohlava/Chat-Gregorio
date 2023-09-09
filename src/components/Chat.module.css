@@ -250,7 +250,10 @@ input {
     }
   }
 
-@media screen and (max-width: 568px) {
+/*  @media screen and (max-width: 500px) {
+    header {
+        max-height: 50px;
+    } 
 
     #wrapperInputSend {
         height: 7vw;
@@ -266,8 +269,12 @@ input {
     }
 
     #inputText {
-        bottom: 22%;
+        bottom: 7%;
     }
+    #icon a{
+        font-size: 5vw;
+    }
+    
 }
 
 @media screen and (max-width: 900px) {
@@ -292,3 +299,16 @@ input {
         bottom: 60px;
     }
 }
+@media screen and (max-width: 500px) {
+    header {
+        height: 80px;  Set the desired height for the header 
+    }
+
+    header h1 {
+        top: 5px; Adjust the top positioning as needed 
+    }
+
+    header span {
+        top: 20px;  Adjust the top positioning as needed 
+    }
+} */ 
