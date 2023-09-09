@@ -250,8 +250,17 @@ input {
     }
   }
 
-/*  @media screen and (max-width: 500px) {
-    header {
+  @media screen and (max-width: 500px) {
+
+    #conversation1 {
+        width: 65%;
+    }
+
+    #conversation2 {
+        width: 65%;
+        margin-left: 3%;
+    }
+    /* header {
         max-height: 50px;
     } 
 
@@ -273,9 +282,9 @@ input {
     }
     #icon a{
         font-size: 5vw;
-    }
+    } */
     
-}
+}  
 
 @media screen and (max-width: 900px) {
     #conversation1 {
@@ -301,14 +310,14 @@ input {
 }
 @media screen and (max-width: 500px) {
     header {
-        height: 80px;  Set the desired height for the header 
+        height: 80px;  /* Set the desired height for the header */ 
     }
 
     header h1 {
-        top: 5px; Adjust the top positioning as needed 
+        top: 5px; /* Adjust the top positioning as needed */ 
     }
 
     header span {
-        top: 20px;  Adjust the top positioning as needed 
+        top: 20px;  /* Adjust the top positioning as needed */ 
     }
-} */ 
+} 
