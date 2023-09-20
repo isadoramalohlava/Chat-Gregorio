@@ -250,6 +250,44 @@ input {
     }
   }
 
+  @media (min-width: 320px) and (max-width:430px){
+    header {
+        position: fixed;
+        text-rendering: optimizeLegibility;
+        height: 6vw;
+    
+    }
+    
+    header h1 {
+       top: 1vw;
+       font-size: 4vw;
+       left: 55px;
+    
+    }
+    
+    header span {
+        font-size: 2vw;
+        top: 4vw;
+        left: 55px;
+    }
+
+    #icon a{
+        top: 30%;
+        font-size: 4vw;
+        width: 4vw;
+      
+    }
+
+    .avatar {
+        height: 8vw;
+        width: 8vw;
+    
+    
+    }
+
+  }
+
+
   @media screen and (max-width: 500px) {
 
     #conversation1 {
